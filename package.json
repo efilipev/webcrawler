@@ -1,0 +1,19 @@
+{
+  "name": "webcrawler",
+  "version": "0.0.1",
+  "description": "Simple ecommerce webCrawler",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Eugene Filipiev",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "jsdom": "^16.4.0",
+    "mongoose": "^5.10.9",
+    "node-cron": "^2.0.3"
+  }
+}

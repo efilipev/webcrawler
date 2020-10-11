@@ -1,0 +1,14 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "webCrawler-development",
+    "host": "mongodb://127.0.0.1:27017/webCrawler-development"
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "webCrawler-production",
+    "host": "mongodb://127.0.0.1:27017/webCrawler-production"
+  }
+}
