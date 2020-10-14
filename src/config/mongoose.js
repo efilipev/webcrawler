@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const dbConfig = require('../config/settings.json');
 
 const ENV = process.env.NODE_ENV;
 console.log('env --', ENV);
@@ -14,8 +13,8 @@ if (ENV === 'development') {
     mongoose.set('debug', true);
 }
 
-exports.connect = function () {
-    mongoose.connect('mongodb://127.0.0.1:27017/webCrawler-development', {
+exports.connect = () => {
+    mongoose.connect('mongodb://localhost:27017/webCrawler-development', {
         keepAlive: 1,
         useCreateIndex: true,
         useNewUrlParser: true,

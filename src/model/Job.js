@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const { Schema, ObjectId } = require('mongoose');
 
 const Job = new Schema({
@@ -11,6 +12,5 @@ const Job = new Schema({
     }
 });
 
-module.exports = {
-    Job
-};
+module.exports = mongoose.model('Job', Job);
+

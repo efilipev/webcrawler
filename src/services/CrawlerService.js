@@ -1,8 +1,7 @@
-const { JSDOM } = require("jsdom");
+const { parse } = require("node-html-parser");
 
 const getBody = page => {
-    const html = new JSDOM(page).window.document.body;
-    return html;
+    return parse(page);
 };
 
 module.exports = {

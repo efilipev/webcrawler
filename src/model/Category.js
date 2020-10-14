@@ -1,12 +1,12 @@
+const mongoose = require('mongoose');
 const { Schema, ObjectId } = require('mongoose');
 
 const Category = new Schema({
     id: ObjectId,
     name: String,
     domain: String,
-    data: Array
+    data: []
 });
 
-module.exports = {
-    Category
-};
+module.exports = mongoose.model('Category', Category);
+

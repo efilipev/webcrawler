@@ -9,7 +9,7 @@ const saveJob = data => {
 };
 
 const deleteJob = data => {
-    return Job.remote(data);
+    return Job.remove(data);
 };
 
 const findJobById = id => {
@@ -21,7 +21,7 @@ const getJobs = () => {
 };
 
 const saveCategory = data => {
-    return Category.save(data);
+    return Category({ name: 'shoes', domain: '6pm', data }).save();
 };
 
 const deleteCategory = data => {
@@ -32,8 +32,8 @@ const findCategoryById = id => {
     return Category.findOne(id);
 };
 
-const getCategories = () => {
-    return Category.get();
+const getCategories = async () => {
+    return await Category.find();
 };
 
 const saveItem = data => {
@@ -48,8 +48,8 @@ const findItemById = id => {
     return Item.findOne(id);
 };
 
-const getItems = () => {
-    return Item.get();
+const getItems = async () => {
+    return await Item.find();
 };
 
 module.exports = {

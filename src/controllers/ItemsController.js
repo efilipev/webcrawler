@@ -1,11 +1,10 @@
 const express = require('express');
-const { handleCellPhonesPage } = require('../strategies/EbayStrategies');
+const { getCategories } = require('../services/MongoService');
 const router = express.Router();
 
 router.get('/items', async (req, res, next) => {
-    const ul = await handleCellPhonesPage();
-    console.log('ULLL ---', ul)
-    return res.json(ul);
+    const items = await getCategories();
+    return res.json(items[0].data);
 });
 
 module.exports = router;
